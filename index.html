@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Rock Paper Scissors Game</h1>
+
+        <div class="choices">
+            <button onclick="makeChoice('rock')">Rock</button>
+            <button onclick="makeChoice('paper')">Paper</button>
+            <button onclick="makeChoice('scissors')">Scissors</button>
+        </div>
+
+        <div class="result">
+            <div class="result-message"></div>
+        </div>
+
+        <table id="game-results-table">
+            <thead>
+                <tr>
+                    <th>Player Choice</th>
+                    <th>Computer Choice</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+
+    <div class="pagination">
+        <button onclick="goToPage('prev')">Prev</button>
+        <button onclick="goToPage('next')">Next</button>
+    </div>
+    
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
