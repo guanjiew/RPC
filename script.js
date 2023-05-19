@@ -1,10 +1,27 @@
 // Set the base URL for your server
-axios.defaults.baseURL = "http://localhost:3000"; // Replace with your server URL
+axios.defaults.baseURL = "https://localhost:3000"; // Replace with your server URL
+axios.defaults.withCredentials = true;
 
-// Set the CORS headers
-axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
-axios.defaults.headers.common["Access-Control-Allow-Methods"] =
-  "GET, POST, OPTIONS";
+function login() {
+  axios.post("/login")
+    .then((response) => {
+      console.log("Login successful!");
+    })
+    .catch((error) => {
+      console.error("An error occurred while logging in:", error);
+    });
+}
+
+
+function logout() {
+  axios.post("/logout")
+    .then((response) => {
+      console.log("Logout successful!");
+    })
+    .catch((error) => {
+      console.error("An error occurred while logging out:", error);
+    });
+}
 
 function makeChoice(playerChoice) {
   var buttons = document.querySelectorAll(".choices button");
